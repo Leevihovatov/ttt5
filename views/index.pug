@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    style
+      include ../styles/styles.css
+
+    title Tic-Tac-Toe
+
+  body
+    center
+      header.header Tic-Tac-Toe
+      p.info#info
+      form(action="/restart", method="POST")
+        input(type="submit", value="Restart")
+      form(action="/draw", method="POST")
+        table.grid_container#board
+      script
+        include ../src/ttt.js
